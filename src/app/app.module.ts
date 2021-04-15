@@ -9,6 +9,8 @@ import { AuthorComponent } from './author/author.component';
 import { BookAuthorComponent } from './book-author/book-author.component';
 import { CategoryComponent } from './category/category.component';
 import { RankingComponent } from './ranking/ranking.component';
+import {HttpClientModule} from '@angular/common/http';
+import {ReactiveFormsModule} from '@angular/forms';
 
 @NgModule({
   declarations: [  //agregar lo relacionado con componentes
@@ -20,9 +22,11 @@ import { RankingComponent } from './ranking/ranking.component';
     CategoryComponent,
     RankingComponent,
   ],
-  imports: [ //relacionado con moduloas
+  imports: [ //relacionado con modulos
     BrowserModule,
-    AppRoutingModule
+    HttpClientModule,
+    AppRoutingModule,
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
