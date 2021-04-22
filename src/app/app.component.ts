@@ -1,6 +1,4 @@
 import {Component, OnInit} from '@angular/core';
-import {FormBuilder, FormGroup, Validators} from '@angular/forms';
-import {HttpRequestsService} from './service/http-requests.service';
 
 @Component({
   selector: 'app-root', // podamos llamar a algun componente
@@ -10,11 +8,14 @@ import {HttpRequestsService} from './service/http-requests.service';
 export class AppComponent implements OnInit {
   title = 'angularPrueba';
 
-  registerForm: FormGroup;
+  ngOnInit(): void {
+  }
+
+ /* registerForm: FormGroup;
 
   constructor(private httpService: HttpRequestsService,
               private fb: FormBuilder) {
-    this.registerForm = this.fb.group({
+   this.registerForm = this.fb.group({
       title: ['', Validators.required],
       firstName: ['', Validators.required],
       lastName: ['', Validators.required],
@@ -38,5 +39,5 @@ export class AppComponent implements OnInit {
     // display form values on success
     alert('SUCCESS!! :-)\n\n' + JSON.stringify(this.registerForm.value, null, 4));
 
-  }
+  }*/
 }
